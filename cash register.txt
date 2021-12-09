@@ -1,0 +1,24 @@
+change = 100 - float(input ("Purchase Price"))
+
+print("Your change is"+ str(change))
+print("----------------------")
+tw = int(change /20)
+ten = int(change %20 / 10)
+five = int(change % 20 % 10/15)
+ones = int(change % 20 % 10 % 5)
+change = int(change % 20 % 10 % 5 % 1 *100 + 1)
+q = int(change /25)
+d = int(change % 25 / 10)
+n = int(change % 25 % 10 / 5)
+p = int(change % 25 % 10 % 5)
+
+if tw > 0:
+    print(str(tw) + " $20 bill(s)")
+if ten > 0:
+    print(str(ten) + " $10 bill(s)")
+if five > 0:
+    print(str(five) + " $5 bill(s)")
+if ones > 0:
+    print(str(ones) + " $1 bill(s)")
+if q > 0:
+    print(str(q) + " quarter(s)")
